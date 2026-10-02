@@ -574,7 +574,7 @@ text]]
 b]]
 
 [[This is **not** a
-_wiki link_]]
+*wiki link*]]
 
 [[test1
 [[wiki link]]
@@ -717,7 +717,7 @@ text]]
 b]]
 
 [[This is **not** a
-_wiki link_]]
+*wiki link*]]
 
 [[test1
 [[wiki link]]
@@ -860,7 +860,7 @@ text]]
 b]]
 
 [[This is **not** a
-_wiki link_]]
+*wiki link*]]
 
 [[test1
 [[wiki link]]
@@ -1003,7 +1003,7 @@ text]]
 b]]
 
 [[This is **not** a
-_wiki link_]]
+*wiki link*]]
 
 [[test1
 [[wiki link]]

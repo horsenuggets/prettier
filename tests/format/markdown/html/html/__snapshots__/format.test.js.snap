@@ -81,7 +81,7 @@ pre
 <pre>
 **Hello**,
 
-_world_.
+*world*.
 </pre>
 </td></tr></table>
 
@@ -89,7 +89,7 @@ _world_.
 pre
 **Hello**,
 
-_world_.
+*world*.
 pre
 </td></tr></table>
 

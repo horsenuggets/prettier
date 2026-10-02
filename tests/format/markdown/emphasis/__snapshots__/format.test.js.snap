@@ -9,7 +9,7 @@ proseWrap: "always"
 *123*
 
 =====================================output=====================================
-_123_
+*123*
 
 ================================================================================
 `;
@@ -25,9 +25,36 @@ proseWrap: "always"
 *bug*?
 
 =====================================output=====================================
-**Do you want to request a _feature_ or report a _bug_?**
+**Do you want to request a *feature* or report a *bug*?**
 
-_bug_?
+*bug*?
+
+================================================================================
+`;
+
+exports[`horse-asterisk-default.md - {"proseWrap":"always"} format 1`] = `
+====================================options=====================================
+parsers: ["markdown"]
+proseWrap: "always"
+                                                      printWidth: 80 (default) |
+=====================================input======================================
+This is _italic_ and this is *also italic*.
+
+A standalone emphasis like _word_ should use asterisks.
+
+But emphasis whose content contains a literal star like *a * b* falls back to underscores.
+
+Nested _emphasis with *inner* span_ keeps asterisks for the inner.
+
+=====================================output=====================================
+This is *italic* and this is *also italic*.
+
+A standalone emphasis like *word* should use asterisks.
+
+But emphasis whose content contains a literal star like _a * b_ falls back to
+underscores.
+
+Nested _emphasis with *inner* span_ keeps asterisks for the inner.
 
 ================================================================================
 `;
@@ -60,11 +87,11 @@ proseWrap: "always"
 _[Italic link](../_link_including_underscores_.md)_
 
 =====================================output=====================================
-_[Italic link](../_link_including_underscores_.md)_
+*[Italic link](../_link_including_underscores_.md)*
 
 ---
 
-_[Italic link](../_link_including_underscores_.md)_
+*[Italic link](../_link_including_underscores_.md)*
 
 ================================================================================
 `;
@@ -88,7 +115,7 @@ proseWrap: "always"
 
 2: The _exponentiation (\`*\`)_ operator.
 
-3: The _exponentiation (\`_\`)_ operator.
+3: The *exponentiation (\`_\`)* operator.
 
 4: The **exponentiation (\`__\`)** operator.
 
@@ -106,9 +133,9 @@ proseWrap: "always"
 - style_name = _dplr_
 
 =====================================output=====================================
-- style\\_name = _dplr_
-- style\\_name = _dplr_
-- style_name = _dplr_
+- style\\_name = *dplr*
+- style\\_name = *dplr*
+- style_name = *dplr*
 
 ================================================================================
 `;
@@ -124,7 +151,7 @@ the _response_ and prevent developers from reading a \`null\` produced by an
 
 =====================================output=====================================
 Note: With {"NO\\_PROPAGATE"}, the client is expected to honour the {"errors"} in
-the _response_ and prevent developers from reading a \`null\` produced by an
+the *response* and prevent developers from reading a \`null\` produced by an
 
 ================================================================================
 `;
@@ -143,12 +170,12 @@ foo _bar_ baz
 foo _bar_ baz
 
 =====================================output=====================================
-- _REPORTED_ — message received;
-- _NEEDSINFO_ — additional info needed;
+- *REPORTED* — message received;
+- *NEEDSINFO* — additional info needed;
 
-foo _bar_ baz
+foo *bar* baz
 
-foo _bar_ baz
+foo *bar* baz
 
 ================================================================================
 `;
@@ -202,7 +229,7 @@ proseWrap: "always"
 
 0*1*!
 
-!_1_!
+!*1*!
 
 0*1*2
 
@@ -210,7 +237,7 @@ proseWrap: "always"
 
 0*1*！
 
-！_1_！
+！*1*！
 
 0_1_2
 
@@ -218,7 +245,7 @@ proseWrap: "always"
 
 0_1_!
 
-!_1_!
+!*1*!
 
 0_1_2
 
@@ -226,7 +253,7 @@ proseWrap: "always"
 
 0_1_！
 
-！_1_！
+！*1*！
 
 1***2***3
 
@@ -244,7 +271,7 @@ proseWrap: "always"
 _123_
 
 =====================================output=====================================
-_123_
+*123*
 
 ================================================================================
 `;

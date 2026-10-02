@@ -866,17 +866,17 @@ proseWrap: "always"
 =====================================output=====================================
 > [!NOTE] \`DOOM\`
 
-> _b_
+> *b*
 >
 > > \`A\` \`B\`
 
-> _a_
+> *a*
 >
 > > # foo
 > >
 > > \`a\` > \`b\`
 
-> This is a quote with an italic _across multuple lines which should just work_.
+> This is a quote with an italic *across multuple lines which should just work*.
 > So make sure there is no > if we set proseWrap to \`never\`
 
 > This is a quote with a link
@@ -915,17 +915,17 @@ proseWrap: "never"
 =====================================output=====================================
 > [!NOTE] \`DOOM\`
 
-> _b_
+> *b*
 >
 > > \`A\` \`B\`
 
-> _a_
+> *a*
 >
 > > # foo
 > >
 > > \`a\` > \`b\`
 
-> This is a quote with an italic _across multuple lines which should just work_. So make sure there is no > if we set proseWrap to \`never\`
+> This is a quote with an italic *across multuple lines which should just work*. So make sure there is no > if we set proseWrap to \`never\`
 
 > This is a quote with a link [across multuple lines which should just work](<>). So make sure there is no > if we set proseWrap to \`never\`
 
@@ -962,19 +962,19 @@ proseWrap: "preserve"
 > [!NOTE]
 > \`DOOM\`
 
-> _b_
+> *b*
 >
 > > \`A\`
 > > \`B\`
 
-> _a_
+> *a*
 >
 > > # foo
 > >
 > > \`a\` > \`b\`
 
-> This is a quote with an italic _across multuple lines
-> which should just work_. So make sure there is no > if we set
+> This is a quote with an italic *across multuple lines
+> which should just work*. So make sure there is no > if we set
 > proseWrap to \`never\`
 
 > This is a quote with a link [across multuple lines

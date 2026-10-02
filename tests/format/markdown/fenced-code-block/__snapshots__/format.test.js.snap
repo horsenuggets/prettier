@@ -29,10 +29,10 @@ parsers: ["markdown"]
 > **Strong emphasis** after link reference.
 
 > [CRITICAL]
-> _emphasis_ oafter link reference
+> *emphasis* oafter link reference
 
 > **Strong emphasis**
-> _emphasis_
+> *emphasis*
 
 [NOTE]: /note
 [IMPORTANT]: /important

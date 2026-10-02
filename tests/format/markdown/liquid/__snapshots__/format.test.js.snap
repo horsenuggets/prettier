@@ -678,7 +678,7 @@ proseWrap: "always"
 Braces {%  doesn't    match so   these   words should not   be   considered as *liquid node* }}
 
 =====================================output=====================================
-Braces {% doesn't match so these words should not be considered as _liquid node_
+Braces {% doesn't match so these words should not be considered as *liquid node*
 }}
 
 ================================================================================
@@ -693,7 +693,7 @@ parsers: ["markdown"]
 Braces {%  doesn't    match so   these   words should not   be   considered as *liquid node* }}
 
 =====================================output=====================================
-Braces {% doesn't match so these words should not be considered as _liquid node_ }}
+Braces {% doesn't match so these words should not be considered as *liquid node* }}
 
 ================================================================================
 `;
@@ -709,8 +709,8 @@ proseWrap: "always"
 Following brace doesn't   open  so these words    should not be   considered as *liquid node* }}
 
 =====================================output=====================================
-Following brace doesn't open so these words should not be considered as _liquid
-node_ }}
+Following brace doesn't open so these words should not be considered as *liquid
+node* }}
 
 ================================================================================
 `;
@@ -725,7 +725,7 @@ parsers: ["markdown"]
 Following brace doesn't   open  so these words    should not be   considered as *liquid node* }}
 
 =====================================output=====================================
-Following brace doesn't open so these words should not be considered as _liquid node_ }}
+Following brace doesn't open so these words should not be considered as *liquid node* }}
 
 ================================================================================
 `;
@@ -741,8 +741,8 @@ proseWrap: "always"
 This brace {{ doesn't   close  so these words    should not be   considered as *liquid node*
 
 =====================================output=====================================
-This brace {{ doesn't close so these words should not be considered as _liquid
-node_
+This brace {{ doesn't close so these words should not be considered as *liquid
+node*
 
 ================================================================================
 `;
@@ -757,7 +757,7 @@ parsers: ["markdown"]
 This brace {{ doesn't   close  so these words    should not be   considered as *liquid node*
 
 =====================================output=====================================
-This brace {{ doesn't close so these words should not be considered as _liquid node_
+This brace {{ doesn't close so these words should not be considered as *liquid node*
 
 ================================================================================
 `;
@@ -773,8 +773,8 @@ proseWrap: "always"
 Following brace doesn't   open  so these words    should not be   considered as *liquid node* %}
 
 =====================================output=====================================
-Following brace doesn't open so these words should not be considered as _liquid
-node_ %}
+Following brace doesn't open so these words should not be considered as *liquid
+node* %}
 
 ================================================================================
 `;
@@ -789,7 +789,7 @@ parsers: ["markdown"]
 Following brace doesn't   open  so these words    should not be   considered as *liquid node* %}
 
 =====================================output=====================================
-Following brace doesn't open so these words should not be considered as _liquid node_ %}
+Following brace doesn't open so these words should not be considered as *liquid node* %}
 
 ================================================================================
 `;
@@ -805,8 +805,8 @@ proseWrap: "always"
 This brace {% doesn't   close  so these words    should not be   considered as *liquid node*
 
 =====================================output=====================================
-This brace {% doesn't close so these words should not be considered as _liquid
-node_
+This brace {% doesn't close so these words should not be considered as *liquid
+node*
 
 ================================================================================
 `;
@@ -821,7 +821,7 @@ parsers: ["markdown"]
 This brace {% doesn't   close  so these words    should not be   considered as *liquid node*
 
 =====================================output=====================================
-This brace {% doesn't close so these words should not be considered as _liquid node_
+This brace {% doesn't close so these words should not be considered as *liquid node*
 
 ================================================================================
 `;
