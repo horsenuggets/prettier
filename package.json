@@ -1,9 +1,9 @@
 {
-  "name": "prettier",
+  "name": "@horsenuggets/prettier",
   "version": "3.9.9",
   "description": "Prettier is an opinionated code formatter",
   "bin": "./bin/prettier.cjs",
-  "repository": "prettier/prettier",
+  "repository": "horsenuggets/prettier",
   "funding": "https://github.com/prettier/prettier?sponsor=1",
   "homepage": "https://prettier.io",
   "author": "James Long",
