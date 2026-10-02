@@ -78,6 +78,18 @@ Valid options:
 }
 `;
 
+exports[`show detailed usage with --help changelog-compact-versions  1`] = `
+{
+  "stderr": "",
+  "stdout": "--changelog-compact-versions
+
+  For files named CHANGELOG.md, omit the blank line after each \`## <semver>\` version heading so the heading is immediately followed by its content.
+
+Default: true",
+  "write": [],
+}
+`;
+
 exports[`show detailed usage with --help check  1`] = `
 {
   "stderr": "",
