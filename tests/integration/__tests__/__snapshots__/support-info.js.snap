@@ -106,10 +106,6 @@ exports[`API getSupportInfo() 1`] = `
       "default": true,
       "type": "boolean",
     },
-    "changelogCompactVersions": {
-      "default": true,
-      "type": "boolean",
-    },
     "checkIgnorePragma": {
       "default": false,
       "type": "boolean",
@@ -828,14 +824,6 @@ exports[`CLI --support-info  1`] = `
       "description": "Print spaces between brackets.",
       "name": "bracketSpacing",
       "oppositeDescription": "Do not print spaces between brackets.",
-      "pluginDefaults": {},
-      "type": "boolean"
-    },
-    {
-      "category": "Global",
-      "default": true,
-      "description": "For files named CHANGELOG.md, omit the blank line after each \`## <semver>\` version heading so the heading is immediately followed by its content.",
-      "name": "changelogCompactVersions",
       "pluginDefaults": {},
       "type": "boolean"
     },

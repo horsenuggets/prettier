@@ -44,13 +44,6 @@ import {
 
 /** @type {{ [name: string]: OptionInfo }} */
 const options = {
-  changelogCompactVersions: {
-    category: CATEGORY_GLOBAL,
-    type: "boolean",
-    default: true,
-    description:
-      "For files named CHANGELOG.md, omit the blank line after each `## <semver>` version heading so the heading is immediately followed by its content.",
-  },
   checkIgnorePragma: {
     category: CATEGORY_SPECIAL,
     type: "boolean",

@@ -56,59 +56,12 @@ function shouldPrePrintHardline({ node, parent }) {
 
 const SIBLING_NODE_TYPES = new Set(["listItem", "definition"]);
 
-// Matches a `## <semver>` ATX heading used for a version entry, e.g.
-// `## 1.2.3`, `## 1.2.3-beta.1`, `## [1.2.3]`. Anything looser (`## Unreleased`,
-// `## Changelog`) is left alone.
-const VERSION_HEADING_TEXT = /^\[?v?\d+\.\d+\.\d+(?:[-+][\w.-]+)?\]?$/u;
-
-function isChangelogFilepath(options) {
-  const { filepath } = options;
-  if (typeof filepath !== "string" || filepath.length === 0) {
-    return false;
-  }
-  const basename = filepath.split(/[/\\]/u).pop();
-  return basename === "CHANGELOG.md";
-}
-
-/**
- * True when `node` is a level-2 ATX heading whose text is a semver-ish version.
- * @param {*} node
- * @param {*} options
- * @returns {boolean}
- */
-function isVersionHeading(node, options) {
-  if (
-    !node ||
-    node.type !== "heading" ||
-    node.depth !== 2 ||
-    isSetextHeading(node)
-  ) {
-    return false;
-  }
-  const text = options.originalText
-    .slice(node.position.start.offset, node.position.end.offset)
-    .replace(/^#{2}\s+/u, "")
-    .trim();
-  return VERSION_HEADING_TEXT.test(text);
-}
-
 /**
  * @param {AstPath} path
  * @returns {boolean}
  */
 function shouldPrePrintDoubleHardline(path, options) {
   const { node, previous, parent } = path;
-
-  // Compact CHANGELOG.md version headings: suppress the blank line that would
-  // otherwise separate a `## <semver>` heading from its following content.
-  if (
-    options.changelogCompactVersions &&
-    previous &&
-    isChangelogFilepath(options) &&
-    isVersionHeading(previous, options)
-  ) {
-    return false;
-  }
 
   if (options.parser === "mdx") {
     if (
