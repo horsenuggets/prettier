@@ -24,10 +24,17 @@ jobs:
         with:
           cache: "yarn"
 
+      # The action switches revisions, so retain the installer outside its checkout.
+      - name: Prepare size-check installer
+        run: cp scripts/install-size-check-dependencies.mjs "$RUNNER_TEMP/install-size-check-dependencies.mjs"
+
       - name: Check Sizes
+        env:
+          SIZE_CHECK_HEAD: ${{ github.sha }}
         uses: preactjs/compressed-size-action@f322c295dde06a1cb7ccaef105732dd8a726d1d9 # 2.10.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           pattern: "./dist/**/*"
           compression: none
           build-script: "build --clean"
+          install-script: 'node "${{ runner.temp }}/install-size-check-dependencies.mjs"'
