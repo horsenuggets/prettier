@@ -165,10 +165,12 @@ function printMdast(path, options, print) {
           inStrongAndHasPrevOrNextWord ||
           path.hasAncestor((node) => node.type === "emphasis")
             ? "*"
-            : // Default italic emphasis to `*`; fall back to `_` only when the
-              // emphasized content contains a literal `*` (which would otherwise
-              // need escaping or break the emphasis span).
-              options.originalText
+            : // Use `_` around nested emphasis or literal `*` content so that
+              // formatting stays stable when child markers are normalized.
+              node.children.some((child) =>
+                  ["emphasis", "strong"].includes(child.type),
+                ) ||
+                options.originalText
                   .slice(
                     node.position.start.offset + 1,
                     node.position.end.offset - 1,
