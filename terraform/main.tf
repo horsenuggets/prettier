@@ -68,6 +68,17 @@ resource "github_repository" "repo" {
     }
 }
 
+import {
+    to = github_repository_vulnerability_alerts.repo
+    id = "prettier"
+}
+
+# Dependency review needs the dependency graph, which Dependabot alerts enable.
+resource "github_repository_vulnerability_alerts" "repo" {
+    repository = github_repository.repo.name
+    enabled = true
+}
+
 resource "github_repository_ruleset" "main" {
     name = "main"
     repository = github_repository.repo.name
@@ -90,7 +101,6 @@ resource "github_repository_ruleset" "main" {
             dismiss_stale_reviews_on_push = true
         }
 
-        # The upstream workflows only run in the upstream repository, so no checks are
-        # required on this fork.
+        # This fork preserves its upstream CI policy without a required-check list.
     }
 }
