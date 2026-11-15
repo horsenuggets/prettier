@@ -261,6 +261,7 @@
         "Tatsunori",
         "testname",
         "textlint",
+        "tfstate",
         "Tomasek",
         "toplevel",
         "Tparam",
@@ -318,6 +319,7 @@
         "\\(https?://.*?\\)",
         "authors: \".*?\"",
         "\"authors\": \".*?\"",
+        "\"(?:name|repository)\": \"[^\"]+\"",
         "(long|after){3,}",
         "\\\\u\\{[0-9a-fA-F]{4,6}\\}",
         "appId: \".*?\""
